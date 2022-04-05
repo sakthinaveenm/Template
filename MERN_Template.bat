@@ -1,8 +1,8 @@
 @echo off
 echo "Welcome to Template Generate For MERN STACK"
-set /p MYNAME="Enter Project Name : "
-mkdir %MYNAME%
-cd %MYNAME%
+set /p PROJECTNAME="Enter Project Name : "
+mkdir %PROJECTNAME%
+cd %PROJECTNAME%
 mkdir Frontend
 mkdir Backend
 
@@ -62,123 +62,124 @@ echo JWT_SECRET=FFFJWIEJEKKCNCJSSK >> .env
 echo JWT_SECRET=JDFJFD >> .env
 echo node_modules/ >> .gitignore
 echo npm-debug.* >> .gitignore
-echo const express = require('express'); >> app.js
-echo const bodyParser = require('body-parser'); >> app.js
-echo const cors = require('cors'); >> app.js
-echo const morgan = require('morgan'); >> app.js
-echo const app = express(); >> app.js
-echo const api = require('./routes/api'); >> app.js
-echo require('dotenv').config(); >> app.js
-echo app.use(cors()); >> app.js
-echo app.use(bodyParser.json()); >> app.js
-echo app.use(bodyParser.urlencoded({ extended: true })); >> app.js
-echo app.use(morgan("dev")) >> app.js
-echo app.use('/api', api); >> app.js
-echo // set Header >> app.js
-echo app.use((req,res,next)=>{ >> app.js
-echo // Website you wish to allow to connect >> app.js
-echo res.setHeader("Access-Control-Allow-Origin", "*"); >> app.js
-echo // Request methods you wish to allow >> app.js
-echo res.setHeader("Access-Control-Allow-Methods","GET, POST, OPTIONS, PUT, PATCH, DELETE") >> app.js
-echo // Request headers you wish to allow >> app.js
-echo res.setHeader( "Access-Control-Allow-Headers","X-Requested-With,content-type"); >> app.js
-echo // Set to true if you need the website to include cookies in the requests sent >> app.js
-echo // to the API (e.g. in case you use sessions) >> app.js
-echo res.setHeader("Access-Control-Allow-Credentials", true); >> app.js
-echo // Pass to next layer of middleware >> app.js
-echo next(); >> app.js
-echo }) >> app.js
-echo // Error Page >> app.js
-echo app.use((req,res,next)=>{ >> app.js
-echo var err = new Error('not found'); >> app.js
-echo err.status = 404; >> app.js
-echo next(err); >> app.js
-echo }) >> app.js
-echo // error handler >> app.js
-echo app.use(function (err, req, res, next) { >> app.js
-echo // set locals, only providing error in development >> app.js
-echo res.locals.message = err.message; >> app.js
-echo res.locals.error = req.app.get("env") === "development" ? err : {}; >> app.js
-echo undefined >> app.js
-echo if (err.status === 404) { >> app.js
-echo res.status(404).json({ message: err.message }); >> app.js
-echo } else { >> app.js
-echo res.status(500).json({ message: err.message }); >> app.js
-echo } >> app.js
-echo }); >> app.js
-echo module.exports = app; >> app.js
+@REM echo const express = require('express'); >> app.js
+@REM echo const bodyParser = require('body-parser'); >> app.js
+@REM echo const cors = require('cors'); >> app.js
+@REM echo const morgan = require('morgan'); >> app.js
+@REM echo const app = express(); >> app.js
+@REM echo const api = require('./routes/api'); >> app.js
+@REM echo require('dotenv').config(); >> app.js
+@REM echo app.use(cors()); >> app.js
+@REM echo app.use(bodyParser.json()); >> app.js
+@REM echo app.use(bodyParser.urlencoded({ extended: true })); >> app.js
+@REM echo app.use(morgan("dev")) >> app.js
+@REM echo app.use('/api', api); >> app.js
+@REM echo // set Header >> app.js
+@REM echo app.use((req,res,next)=>{ >> app.js
+@REM echo // Website you wish to allow to connect >> app.js
+@REM echo res.setHeader("Access-Control-Allow-Origin", "*"); >> app.js
+@REM echo // Request methods you wish to allow >> app.js
+@REM echo res.setHeader("Access-Control-Allow-Methods","GET, POST, OPTIONS, PUT, PATCH, DELETE") >> app.js
+@REM echo // Request headers you wish to allow >> app.js
+@REM echo res.setHeader( "Access-Control-Allow-Headers","X-Requested-With,content-type"); >> app.js
+@REM echo // Set to true if you need the website to include cookies in the requests sent >> app.js
+@REM echo // to the API (e.g. in case you use sessions) >> app.js
+@REM echo res.setHeader("Access-Control-Allow-Credentials", true); >> app.js
+@REM echo // Pass to next layer of middleware >> app.js
+@REM echo next(); >> app.js
+@REM echo }) >> app.js
+@REM echo // Error Page >> app.js
+@REM echo app.use((req,res,next)=>{ >> app.js
+@REM echo var err = new Error('not found'); >> app.js
+@REM echo err.status = 404; >> app.js
+@REM echo next(err); >> app.js
+@REM echo }) >> app.js
+@REM echo // error handler >> app.js
+@REM echo app.use(function (err, req, res, next) { >> app.js
+@REM echo // set locals, only providing error in development >> app.js
+@REM echo res.locals.message = err.message; >> app.js
+@REM echo res.locals.error = req.app.get("env") === "development" ? err : {}; >> app.js
+@REM echo undefined >> app.js
+@REM echo if (err.status === 404) { >> app.js
+@REM echo res.status(404).json({ message: err.message }); >> app.js
+@REM echo } else { >> app.js
+@REM echo res.status(500).json({ message: err.message }); >> app.js
+@REM echo } >> app.js
+@REM echo }); >> app.js
+@REM echo module.exports = app; >> app.js
 mkdir bin && cd bin
-echo const express = require('express'); >> www.js
-echo const bodyParser = require('body-parser'); >> www.js
-echo const cors = require('cors'); >> www.js
-echo const morgan = require('morgan'); >> www.js
-echo const app = express(); >> www.js
-echo const api = require('./routes/api'); >> www.js
-echo require('dotenv').config(); >> www.js
-echo app.use(cors()); >> www.js
-echo app.use(bodyParser.json()); >> www.js
-echo app.use(bodyParser.urlencoded({ extended: true })); >> www.js
-echo app.use(morgan("dev")) >> www.js
-echo app.use('/api', api); >> www.js
-echo // set Header >> www.js
-echo app.use((req,res,next)=>{ >> www.js
-echo // Website you wish to allow to connect >> www.js
-echo res.setHeader("Access-Control-Allow-Origin", "*"); >> www.js
-echo // Request methods you wish to allow >> www.js
-echo res.setHeader("Access-Control-Allow-Methods","GET, POST, OPTIONS, PUT, PATCH, DELETE") >> www.js
-echo // Request headers you wish to allow >> www.js
-echo res.setHeader( "Access-Control-Allow-Headers","X-Requested-With,content-type"); >> www.js
-echo // Set to true if you need the website to include cookies in the requests sent >> www.js
-echo // to the API (e.g. in case you use sessions) >> www.js
-echo res.setHeader("Access-Control-Allow-Credentials", true); >> www.js
-echo // Pass to next layer of middleware >> www.js
-echo next(); >> www.js
-echo }) >> www.js
-echo // Error Page >> www.js
-echo app.use((req,res,next)=>{ >> www.js
-echo var err = new Error('not found'); >> www.js
-echo err.status = 404; >> www.js
-echo next(err); >> www.js
-echo }) >> www.js
-echo // error handler >> www.js
-echo app.use(function (err, req, res, next) { >> www.js
-echo // set locals, only providing error in development >> www.js
-echo res.locals.message = err.message; >> www.js
-echo res.locals.error = req.app.get("env") === "development" ? err : {}; >> www.js
-echo if (err.status === 404) { >> www.js
-echo res.status(404).json({ message: err.message }); >> www.js
-echo } else { >> www.js
-echo res.status(500).json({ message: err.message }); >> www.js
-echo } >> www.js
-echo }); >> www.js
-echo module.exports = app; >> www.js
+@REM echo const express = require('express'); >> www.js
+@REM echo const bodyParser = require('body-parser'); >> www.js
+@REM echo const cors = require('cors'); >> www.js
+@REM echo const morgan = require('morgan'); >> www.js
+@REM echo const app = express(); >> www.js
+@REM echo const api = require('./routes/api'); >> www.js
+@REM echo require('dotenv').config(); >> www.js
+@REM echo app.use(cors()); >> www.js
+@REM echo app.use(bodyParser.json()); >> www.js
+@REM echo app.use(bodyParser.urlencoded({ extended: true })); >> www.js
+@REM echo app.use(morgan("dev")) >> www.js
+@REM echo app.use('/api', api); >> www.js
+@REM echo // set Header >> www.js
+@REM echo app.use((req,res,next)=>{ >> www.js
+@REM echo // Website you wish to allow to connect >> www.js
+@REM echo res.setHeader("Access-Control-Allow-Origin", "*"); >> www.js
+@REM echo // Request methods you wish to allow >> www.js
+@REM echo res.setHeader("Access-Control-Allow-Methods","GET, POST, OPTIONS, PUT, PATCH, DELETE") >> www.js
+@REM echo // Request headers you wish to allow >> www.js
+@REM echo res.setHeader( "Access-Control-Allow-Headers","X-Requested-With,content-type"); >> www.js
+@REM echo // Set to true if you need the website to include cookies in the requests sent >> www.js
+@REM echo // to the API (e.g. in case you use sessions) >> www.js
+@REM echo res.setHeader("Access-Control-Allow-Credentials", true); >> www.js
+@REM echo // Pass to next layer of middleware >> www.js
+@REM echo next(); >> www.js
+@REM echo }) >> www.js
+@REM echo // Error Page >> www.js
+@REM echo app.use((req,res,next)=>{ >> www.js
+@REM echo var err = new Error('not found'); >> www.js
+@REM echo err.status = 404; >> www.js
+@REM echo next(err); >> www.js
+@REM echo }) >> www.js
+@REM echo // error handler >> www.js
+@REM echo app.use(function (err, req, res, next) { >> www.js
+@REM echo // set locals, only providing error in development >> www.js
+@REM echo res.locals.message = err.message; >> www.js
+@REM echo res.locals.error = req.app.get("env") === "development" ? err : {}; >> www.js
+@REM echo if (err.status === 404) { >> www.js
+@REM echo res.status(404).json({ message: err.message }); >> www.js
+@REM echo } else { >> www.js
+@REM echo res.status(500).json({ message: err.message }); >> www.js
+@REM echo } >> www.js
+@REM echo }); >> www.js
+@REM echo module.exports = app; >> www.js
 cd ..
 cd services
-echo const { to } = require('await-to-js'); >> util.service.js
-echo module.exports.to = async(promise)=>{ >> util.service.js
-echo let err,res; >> util.service.js
-echo [err, res] = await to(promise); >> util.service.js
-echo if (err) return [err, null]; >> util.service.js
-echo return [null, res]; >> util.service.js
-echo } >> util.service.js
-echo module.exports.ReS=function(res,data,code){ >> util.service.js
-echo let send_data = { success: true }; >> util.service.js
-echo if (typeof data === 'object') send_data = Object.assign(data, send_data); >> util.service.js
-echo if (typeof code !== 'undefined') res.statusCode = code; >> util.service.js
-echo else { res.statusCode = 400 } >> util.service.js
-echo return res.json(send_data); >> util.service.js
-echo } >> util.service.js
-echo module.exports.ReE=function(res,err,code){ >> util.service.js
-echo if (typeof err === 'object' && err.message !== 'undefined') err = err.message; >> util.service.js
-echo if (typeof code !== 'undefined') res.statusCode = code; >> util.service.js
-echo return res.json({ success: false, error: err }); >> util.service.js
-echo } >> util.service.js
-echo module.exports.TE = function (err_message, log) { >> util.service.js
-echo if (log === true) { >> util.service.js
-echo console.error(err_message) >> util.service.js
-echo } >> util.service.js
-echo throw new Error(err_message); >> util.service.js
-echo } >> util.service.js
+
+@REM echo const { to } = require('await-to-js'); >> util.service.js
+@REM echo module.exports.to = async(promise)=>{ >> util.service.js
+@REM echo let err,res; >> util.service.js
+@REM echo [err, res] = await to(promise); >> util.service.js
+@REM echo if (err) return [err, null]; >> util.service.js
+@REM echo return [null, res]; >> util.service.js
+@REM echo } >> util.service.js
+@REM echo module.exports.ReS=function(res,data,code){ >> util.service.js
+@REM echo let send_data = { success: true }; >> util.service.js
+@REM echo if (typeof data === 'object') send_data = Object.assign(data, send_data); >> util.service.js
+@REM echo if (typeof code !== 'undefined') res.statusCode = code; >> util.service.js
+@REM echo else { res.statusCode = 400 } >> util.service.js
+@REM echo return res.json(send_data); >> util.service.js
+@REM echo } >> util.service.js
+@REM echo module.exports.ReE=function(res,err,code){ >> util.service.js
+@REM echo if (typeof err === 'object' && err.message !== 'undefined') err = err.message; >> util.service.js
+@REM echo if (typeof code !== 'undefined') res.statusCode = code; >> util.service.js
+@REM echo return res.json({ success: false, error: err }); >> util.service.js
+@REM echo } >> util.service.js
+@REM echo module.exports.TE = function (err_message, log) { >> util.service.js
+@REM echo if (log === true) { >> util.service.js
+@REM echo console.error(err_message) >> util.service.js
+@REM echo } >> util.service.js
+@REM echo throw new Error(err_message); >> util.service.js
+@REM echo } >> util.service.js
 @REM echo module.exports.isNull = function (field) {return ( typeof field === 'undefined' || >> util.service.js
 @REM echo field === 'undefined' || >> util.service.js
 @REM echo field === "" || >> util.service.js
