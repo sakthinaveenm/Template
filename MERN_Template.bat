@@ -62,6 +62,7 @@ echo JWT_SECRET=FFFJWIEJEKKCNCJSSK >> .env
 echo JWT_SECRET=JDFJFD >> .env
 echo node_modules/ >> .gitignore
 echo npm-debug.* >> .gitignore
+curl -OL https://raw.githubusercontent.com/sakthinaveenm/Template/main/MERN%20Template/Backend/app.js
 @REM echo const express = require('express'); >> app.js
 @REM echo const bodyParser = require('body-parser'); >> app.js
 @REM echo const cors = require('cors'); >> app.js
@@ -108,50 +109,8 @@ echo npm-debug.* >> .gitignore
 @REM echo }); >> app.js
 @REM echo module.exports = app; >> app.js
 mkdir bin && cd bin
-@REM echo const express = require('express'); >> www.js
-@REM echo const bodyParser = require('body-parser'); >> www.js
-@REM echo const cors = require('cors'); >> www.js
-@REM echo const morgan = require('morgan'); >> www.js
-@REM echo const app = express(); >> www.js
-@REM echo const api = require('./routes/api'); >> www.js
-@REM echo require('dotenv').config(); >> www.js
-@REM echo app.use(cors()); >> www.js
-@REM echo app.use(bodyParser.json()); >> www.js
-@REM echo app.use(bodyParser.urlencoded({ extended: true })); >> www.js
-@REM echo app.use(morgan("dev")) >> www.js
-@REM echo app.use('/api', api); >> www.js
-@REM echo // set Header >> www.js
-@REM echo app.use((req,res,next)=>{ >> www.js
-@REM echo // Website you wish to allow to connect >> www.js
-@REM echo res.setHeader("Access-Control-Allow-Origin", "*"); >> www.js
-@REM echo // Request methods you wish to allow >> www.js
-@REM echo res.setHeader("Access-Control-Allow-Methods","GET, POST, OPTIONS, PUT, PATCH, DELETE") >> www.js
-@REM echo // Request headers you wish to allow >> www.js
-@REM echo res.setHeader( "Access-Control-Allow-Headers","X-Requested-With,content-type"); >> www.js
-@REM echo // Set to true if you need the website to include cookies in the requests sent >> www.js
-@REM echo // to the API (e.g. in case you use sessions) >> www.js
-@REM echo res.setHeader("Access-Control-Allow-Credentials", true); >> www.js
-@REM echo // Pass to next layer of middleware >> www.js
-@REM echo next(); >> www.js
-@REM echo }) >> www.js
-@REM echo // Error Page >> www.js
-@REM echo app.use((req,res,next)=>{ >> www.js
-@REM echo var err = new Error('not found'); >> www.js
-@REM echo err.status = 404; >> www.js
-@REM echo next(err); >> www.js
-@REM echo }) >> www.js
-@REM echo // error handler >> www.js
-@REM echo app.use(function (err, req, res, next) { >> www.js
-@REM echo // set locals, only providing error in development >> www.js
-@REM echo res.locals.message = err.message; >> www.js
-@REM echo res.locals.error = req.app.get("env") === "development" ? err : {}; >> www.js
-@REM echo if (err.status === 404) { >> www.js
-@REM echo res.status(404).json({ message: err.message }); >> www.js
-@REM echo } else { >> www.js
-@REM echo res.status(500).json({ message: err.message }); >> www.js
-@REM echo } >> www.js
-@REM echo }); >> www.js
-@REM echo module.exports = app; >> www.js
+curl  -LJO https://raw.githubusercontent.com/sakthinaveenm/Template/main/MERN%20Template/Backend/bin/www.js 
+@REM curl -OL https://raw.githubusercontent.com/sakthinaveenm/Template/main/MERN%20Template/Backend/bin/www.js
 cd ..
 cd services
 
